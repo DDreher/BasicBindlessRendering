@@ -1,0 +1,140 @@
+# Ignore all files by default, but scan all directories
+*
+!*/
+
+# C/C++ source files
+!*.c
+!*.cc
+!*.cpp
+!*.cpp.template
+!*.h
+!*.h.template
+!*.hpp
+!*.inl
+!*.inc
+!*.m
+!*.mm
+!*.rc
+!*.rc2
+!*.def
+!*.exp
+!*.manifest
+!*.lua
+
+# Re-ignore vs host manifest
+*.vshost.exe.manifest
+
+# Java source files
+!*.java
+!*.java.template
+
+# C# source files
+!*.cs
+!*.cs.template
+!*.aspx
+!*.resx
+
+# Shader formats
+!*.usf
+!*.ush
+!*.hlsl
+!*.hlsli
+!*.glsl
+!*.spv
+!*.frag
+
+# Texture files
+!*.png
+!*.jpg
+
+# Model files
+!*.obj
+!*.mtl
+!*.fbx
+!*.glb
+!*.gltf
+!*.bin
+
+# Text files
+!*.txt
+!*.md
+
+# Script files
+!*.bat
+!*.ps1
+!*.sh
+!*.pl
+!*.py
+!*.js
+!*.ts
+!*.command
+
+# Other configuration and markup files
+!*.ini
+!*.json
+!*.tps
+!*.xml
+!*.xaml
+!*.html
+!*.html.template
+!*.css
+!*.config
+!*.version
+!.git*
+!.editorconfig
+
+# Projects and makefiles
+!*.cmake
+!*.mk
+!*.dsp
+!*.dsw
+!*.xcodeproj
+!*.xcconfig
+!*.vsprops
+!*.snippet
+!Makefile
+!Makefile.*
+!Settings.settings
+
+# Specific names
+!README
+!AUTHORS
+!LICENSE
+!FAQ
+!VERSION
+!ChangeLog
+
+# Exceptions
+/*.sln
+/*.xcodeproj
+/Makefile
+/CMakeLists.txt
+/cmake-build-debug
+*.target.xml
+*.dll.config
+*.exe.config
+*.exe.manifest
+
+# Ignore VS / VS Code settings directory
+.vs
+.vscode
+
+# Ignore CLion directory
+.idea/
+
+# Annoying windows files
+[Dd]esktop.ini
+
+# Nuget
+packages/
+
+# intermediate files
+Intermediate/
+obj/
+Saved/
+
+# Exception for necessary binaries
+!premake5.exe
+!/**/*.lib
+!/**/*.dll
+Build/
