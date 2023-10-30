@@ -4,7 +4,7 @@ Sometimes Computer Graphics seems like black magic. There are a few tutorials fo
 
 This project aims to provide such a basic project to showcases how to achieve **bindless rendering** with **DirectX 12** and **Shader Model 6.6**.
 
-**Bindless rendering** refers to a technique with which we can directly access descriptors in a shader via an index into a global resource heap (`ResourceDescriptorHeap` or `SamplerDescriptorHeap`).
+**Bindless rendering** refers to a technique with which we can directly access descriptors in a shader via an index into global descriptor heaps (`ResourceDescriptorHeap` or `SamplerDescriptorHeap`).
 
 This vastly simplifies descriptor and pipeline state management:
 * No need to bind Resource Views ( aka `descriptors`, e.g. constant buffer views, shader resource views, ... )
