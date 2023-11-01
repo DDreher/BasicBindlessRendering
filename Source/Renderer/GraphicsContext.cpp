@@ -286,11 +286,11 @@ namespace gfx
         Signal(gfx::command_queue_direct, gfx::backbuffer_fence, fence_value);
         gfx::backbuffer_fence_values[gfx::current_backbuffer_idx] = fence_value;
 
-        // Stall until we can be sure that we can access the resources accessed by the next back buffer
-        WaitForFence(gfx::backbuffer_fence, gfx::backbuffer_fence_values[gfx::current_backbuffer_idx], gfx::fence_event);
-        
         // When FLIP_DISCARD, we can't rely on sequential backbuffer indices, so we have to query the swapchain.
         current_backbuffer_idx = gfx::swapchain->GetCurrentBackBufferIndex();
+
+        // Stall until we can be sure that we can access the resources accessed by the next back buffer
+        WaitForFence(gfx::backbuffer_fence, gfx::backbuffer_fence_values[gfx::current_backbuffer_idx], gfx::fence_event);
     }
 
     void TransitionResource(const ComPtr<ID3D12GraphicsCommandList>& command_list, const ComPtr<ID3D12Resource>& resource, D3D12_RESOURCE_STATES before, D3D12_RESOURCE_STATES after)
