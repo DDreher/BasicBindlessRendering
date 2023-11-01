@@ -272,8 +272,8 @@ namespace gfx
     {
         ComPtr<ID3D12Fence> flush_fence = CreateFence();
         FlushQueue(gfx::command_queue_direct, flush_fence, 0, fence_event);
-        FlushQueue(gfx::command_queue_direct, flush_fence, 1, fence_event);
-        FlushQueue(gfx::command_queue_direct, flush_fence, 2, fence_event);
+        FlushQueue(gfx::command_queue_compute, flush_fence, 1, fence_event);
+        FlushQueue(gfx::command_queue_copy, flush_fence, 2, fence_event);
         WaitForFence(flush_fence, 2, fence_event);
     }
 
