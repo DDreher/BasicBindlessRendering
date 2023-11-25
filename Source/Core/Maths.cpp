@@ -253,7 +253,7 @@ Mat4 Mat4::RotationX(float rad)
 
 Mat4 Mat4::RotationY(float rad)
 {
-    return XMMatrixRotationZ(rad);
+    return XMMatrixRotationY(rad);
 }
 
 Mat4 Mat4::RotationZ(float rad)
