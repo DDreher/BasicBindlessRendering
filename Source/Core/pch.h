@@ -4,4 +4,3 @@
 #include "Core/CoreUtilities.h"
 #include "Core/Hash.h"
 #include "Core/Maths.h"
-#include "Core/Delegate.h"

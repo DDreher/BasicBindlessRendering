@@ -118,7 +118,6 @@ namespace gfx
     {
         return device != nullptr &&
             swapchain != nullptr &&
-            //render_state_cache != nullptr &&
             renderer != nullptr;
     }
 

@@ -1,5 +1,4 @@
-//Texture2D tex : register(t0);
-//SamplerState tex_sampler : register(s0);
+#include "common.hlsl"
 
 struct PSInput
 {
